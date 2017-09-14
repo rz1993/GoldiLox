@@ -1,7 +1,12 @@
 import unittest
-from scanner import Scanner
-from parser import Parser
-from lox import Lox
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+
+from interpreter.scanner import Scanner
+from interpreter.parser import Parser
+from interpreter.lox import Lox
 
 
 EXPRESSION = "var a = 2 + 3;\nvar b = 3 + 4;\n if (a > 3 && b < 10) {print a; print b;}"
